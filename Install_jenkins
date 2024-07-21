@@ -1,4 +1,4 @@
-"Step 1.  Launch an instance (Amazon Linux 2 AMI) , Access Instance terminal and install and setup java environment "
+**Step 1.  Launch an instance (Amazon Linux 2 AMI) , Access Instance terminal and install and setup java environment **
 
 open port number in SG :80, 8080, 22, 443, and set source as 0.0.0.0/0  or all traffic
 
@@ -8,14 +8,14 @@ sudo alternatives --config java
 
 (In this command point to the latest/or required java version by selection)
 
-"Step 2. Install Maven: Add the apache maven repository to the yum repos, and install apache from there"
+**Step 2. Install Maven: Add the apache maven repository to the yum repos, and install apache from there**
 
 sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
 sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 sudo yum install -y apache-maven
 mvn --version
 
-"Step 3.  Install Jenkins : Add the Jenkins repository to the yum repos and install Jenkins from there."
+**Step 3.  Install Jenkins : Add the Jenkins repository to the yum repos and install Jenkins from there.**
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
@@ -25,13 +25,13 @@ sudo yum install -y jenkins
 sudo service jenkins start
 sudo systemctl enable jenkins
 
-"Step 4. That’s it! Now you can go to browser and access Jenkins URL http://<instance public ip>:8080" 
+**Step 4. That’s it! Now you can go to browser and access Jenkins URL http://<instance public ip>:8080" **
 ex: http://13.215.191.181:8080/
 
-Copy password 
+**Copy password **
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
-Install all the suggested plugin
+**Install all the suggested plugin**
 
-create first admin user and password
+**create first admin user and password**
