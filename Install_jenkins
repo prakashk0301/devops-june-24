@@ -32,6 +32,6 @@ Copy password
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
-Install all the suggest plugin and done
+Install all the suggested plugin
 
 create first admin user and password
