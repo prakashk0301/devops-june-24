@@ -1,0 +1,98 @@
+Install Jenkins-> 
+create a t2 micro aws intance (amazn linux 2 ami), open ports: 80, 443, 22, 8080 (for learning you can open all traffic)
+** jenkins works on port 8080
+
+
+https://github.com/prakashk0301/devops-june-24/blob/master/Install_jenkins
+
+
+
+IP: internet protocol
+
+Public IPs are dyanamic (changabel)
+
+
+EIP (Elastic IP)-> static IP->chargable :
+a. if not associate to any of the instance
+b. associated but instance is not running.
+
+
+if instance is running then no charges
+
+----------------
+
+How to access jenkins from local windows system
+
+https://www.jenkins.io/doc/book/installing/windows/
+
+http://localhost:8080
+
+
+
+-----------------
+if jenkins is taking time to load the page then(you need to perform below activity after every reboot)
+
+
+jenkins dashboard -> manage jenkins -> system -> Jenkins Location  -> provide your current public IP
+
+
+
+
+-------------------
+jenkins acts as build and release tool or CI/CD (cont integration and cont delivery) tool
+
+we can create build (or project or pipeline) & release job
+
+
+
+***install plugin ---> to enable option(to see the setting)
+***install tool   ---> to run the command (ex. maven command, docker command,terraform, python etc)
+
+--------------jenkins first job
+
+
+jenkins dashboard -> new item -> select freestyle  (is compatible with any code language, it executes all
+the activity sequencially)
+
+-> under the build steps -> execute shell -> echo "hello jenkins"  -> save
+
+
+build now -> build history -> 1,2 ,3 .... -> click on build number->  console output
+
+
+
+----> you can configure the job:
+job -> configure -> then you can update
+
+
+-----------2nd jenkins job: how to print IP
+jenkins dashboard -> new item -> select freestyle -> under the build steps -> execute shell
+
+
+MYIP=$(ip route get 8.8.8.8 | awk '{ print $7; exit }') 
+echo "$MYIP"
+
+
+save -> build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
