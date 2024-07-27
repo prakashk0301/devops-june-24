@@ -75,6 +75,90 @@ echo "$MYIP"
 
 save -> build
 
+===========================27-7-2024
+if you forgot the password then->
+
+cd /var/lib/jenkins
+ls
+sudo vi config.xml
+
+then update security(line number 7): put false instead of true
+
+
+sudo service jenkins restart
+or
+sudo systemctl restart jenkins
+
+
+then try to access jenkins dashboard
+
+
+Browser: <ip>:8080
+======
+
+
+Let's configure Jenkins to build maven.
+
+
+1. Install maven tool (build tool) in Jenkins Instance
+2. Install maven plugins: 
+
+jenkins dashboard- > manage jenkins-> manage plugin -> available
+
+  a. pipeline maven integration
+  b. maven integration
+
+3. configure/provide maven executable path
+
+access jenkins ec2 terminal -> once connected -> 
+mvn -v
+which git
+
+
+
+
+jenkins dashboard- > manage jenkins->tool-> Maven installations 
+ex: MAVEN_HOME
+and provide executable path
+
+
+JDK installations 
+ex: Name - > JDK_HOME or JAVA_HOME
+and provide executable path
+
+
+jenkins dashboard- > manage jenkins->tool-> Git installations 
+ex: Name - > Default
+and provide executable path 
+
+
+
+==========================Maven Build Tool
+
+Maven Goal or LifeCycle Rules -> maven has 7 goals or lifecycle rules.
+
+
+1. validate -> it validates the jenkins job, code structure, 
+               it checks if there is any missing necessary files ex. pom.xml (it contains code dependacies)
+2. compile
+3. test
+4. package     (most imp goal, we usually work with package)
+5. install
+6. verify
+7. deploy
+
+
+
+
+***clean the workspace directory before building the job
+
+
+
+
+
+
+
+
 
 
 
