@@ -7,3 +7,9 @@ sudo systemctl status tomcat
 sudo systemctl enable tomcat                             ----> to start the service for all time (Automatic)
 sudo yum install -y tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
 cd /usr/share/tomcat/conf
+
+
+
+How to access tomcat Dashboard:
+
+http://<public IP>:8080
