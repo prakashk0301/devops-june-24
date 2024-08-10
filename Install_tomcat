@@ -6,7 +6,7 @@ sudo systemctl start tomcat
 sudo systemctl status tomcat
 sudo systemctl enable tomcat                             ----> to start the service for all time (Automatic)
 sudo yum install -y tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
-cd /usr/share/tomcat/webapps                             ----> this would be ther directory where we can keep war/jar/ear file 
+cd /usr/share/tomcat/webapps                             ----> this would be ther directory where we can keep war/jar/ear(artifacts) file 
 
 
 
