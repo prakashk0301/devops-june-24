@@ -1,9 +1,9 @@
 Create a new ec2 instance : (Amazon Linux 2 AMI (HVM), SSD Volume Type)
 
-yum install -y java-1.8.0
-yum install -y tomcat
-systemctl start tomcat
-systemctl status tomcat
-systemctl enable tomcat                             ----> to start the service for all time (Automatic)
+sudo yum install -y java-1.8.0
+sudo yum install -y tomcat
+sudo systemctl start tomcat
+sudo systemctl status tomcat
+sudo systemctl enable tomcat                             ----> to start the service for all time (Automatic)
 sudo yum install -y tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
 cd /usr/share/tomcat/conf
