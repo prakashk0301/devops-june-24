@@ -18,4 +18,10 @@ resource "aws_ecr_repository" "foo" {
   }
 }
 
-======================
+======================how to call only ecr.tf
+terraform apply --target=<module name>.<module type>
+
+ex: terraform apply --target=aws_ecr_repository.foo
+
+
+
