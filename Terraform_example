@@ -25,7 +25,6 @@ ex: terraform apply --target=aws_ecr_repository.foo
 
 =================s3.tf
 resource "aws_s3_bucket" "example" {
-  bucket = "ethans-aws-est-bucket"
   bucket_prefix = "dev-"
 
   tags = {
