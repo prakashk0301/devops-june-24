@@ -78,5 +78,6 @@ resource "aws_instance" "myinstance" {
   }
 }
 
-
+=========================2 tier architecture diagram
+https://github.com/prakashk0301/terraform-elb
 
