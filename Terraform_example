@@ -1,0 +1,9 @@
+vi ebs.tf
+resource "aws_ebs_volume" "myebs-new" {
+  availability_zone = "ap-southeast-1a"
+  size              = 11
+
+  tags = {
+    Name = "myebs-new"
+  }
+}
