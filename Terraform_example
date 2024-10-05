@@ -46,11 +46,37 @@ resource "aws_instance" "myinstance" {
   }
 }
 
+======================how to store variables.
+vi var.tf
 
+variable "aws_ami" {
+    description = "ami id"
+    default = "ami-09487ea169b6a279a"
+	}
 
+variable "aws_instance_type" {
+    description = "instance type id"
+    default = "t2.micro"
+	}
 
+variable "az" {
+    description = "az id"
+    default = "ap-southeast-1b"
+	}
 
+vi ec2.tf
 
+resource "aws_instance" "myinstance" {
+  ami           = "${var.aws_ami}"
+  instance_type = "${var.aws_instance_type}"
+  availability_zone = "${var.az}"
+  key_name = "Singpore-key"
+  vpc_security_group_ids = ["sg-0df97ca1127fc734c", "sg-05a43479133509ae3"]
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
 
 
 
